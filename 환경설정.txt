@@ -1,0 +1,18 @@
+1.pip 업그레이드
+python -m pip install --upgrade pip --trusted-host pypi.org --trusted-host files.pythonhosted.org
+
+2.주피터노트북 설치
+pip install jupyter --trusted-host pypi.org --trusted-host files.pythonhosted.org
+
+3.패키지 설치
+pip install pandas matplotlib seaborn pyautogui clipboard datetime pywinauto selenium requests bs4 opencv-python pillow openpyxl nltk kiwipiepy textblob wordcloud squarify gensim scikit-learn tqdm afinn py_lex scipy dataframe_image --trusted-host pypi.org --trusted-host files.pythonhosted.org
+
+4.NLTK 데이터셋 환경설정 : 사내에서는 방화벽때문에 자동 다운 불가로 수동 다운
+'nltk_data' 폴더는 다음 폴더에 압축 풀기(폴더명은 PC 계정에 따라 다를 수 있음) : C:\Users\poscoedu\AppData\Roaming\nltk_data
+
+5.PyAutoGUI activate() 에러시 대안 
+import pywinauto
+win = pg.getWindowsWithTitle("제목 없음")[0]
+pywinauto.application.Application().connect(handle=win._hWnd).top_window().set_focus()
+pg.sleep(1)
+win.activate()
